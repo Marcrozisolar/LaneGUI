@@ -40,8 +40,8 @@ prev_right_line = None
 # ---------------- Lane Detection Functions ----------------
 left_kalman = cv2.KalmanFilter(8, 4)
 right_kalman = cv2.KalmanFilter(8, 4)
-video_path = "Users/pl261721/Downloads/2679.mov"
-image_path = "Users/pl261721/Downloads/arrow.png"
+video_path = "/Users/pl261721/Downloads/2679.mov"
+image_path = "/Users/pl261721/Downloads/arrow.png"
 
 
 def init_kalman_filter(kalman):
@@ -301,12 +301,12 @@ def start_main_app():
 
 
    # Load video capture
-   video_path = "Users/pl261721/Downloads/2679.mov"  # Update path if needed
+   video_path = "/Users/pl261721/Downloads/2679.mov"  # Update path if needed
    cap = cv2.VideoCapture(video_path)
 
 
    # Load and prepare the PNG overlay image (arrow)
-   arrow_img_path = "Users/pl261721/Downloads/arrow.png"  # Update path if needed
+   arrow_img_path = "/Users/pl261721/Downloads/arrow.png"  # Update path if needed
    arrow_pil = Image.open(arrow_img_path).convert("RGBA")
    arrow_np = np.array(arrow_pil)
    arrow_np = cv2.cvtColor(arrow_np, cv2.COLOR_RGBA2BGRA)
